@@ -1,0 +1,123 @@
+/* === INTRO SECTION === */
+/* Section global */
+#intro {
+  margin-bottom: 80px;
+}
+/* Bread crumbs */
+.bread-crumbs {
+  display: none;
+}
+/* City presentation */
+.intro {
+  margin-bottom: 60px;
+}
+.intro p {
+  font-size: 16px;
+  font-family: "Georgia";
+  color: var(--gray);
+  line-height: 20px;
+}
+.map .card-header {
+  background-color: var(--red);
+  padding: 32px;
+  border-radius: 16px 16px 0 0;
+}
+.map .card-header p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+.map .card-header .cta-btn {
+  padding: 16px 20px;
+  border-radius: 14px;
+}
+.map img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 0 0 16px 16px;
+}
+
+/* === TABLET === */
+@media (min-width: 768px) {
+  /* Bread crumbs */
+  .bread-crumbs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    font-size: 12px;
+  }
+  .bread-crumbs ul {
+    display: flex;
+  }
+  .bread-crumbs ul li {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+  .bread-crumbs ul li:last-of-type {
+    margin-right: 0;
+  }
+  .bread-crumbs ul li a {
+    text-decoration: none;
+    margin-right: 8px;
+  }
+  .bread-crumbs ul li i {
+    font-size: 8px;
+  }
+  .bread-crumbs ul li a,
+  .bread-crumbs ul li i {
+    color: var(--gray);
+  }
+  .bread-crumbs ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* City presentation */
+  .intro p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .map {
+    display: flex;
+  }
+  .map .card-header {
+    flex: 6;
+    border-radius: 16px 0 0 16px;
+  }
+  .map .card-image {
+    flex: 7;
+  }
+  .map .card-image img {
+    height: 100%;
+    border-radius: 0 16px 16px 0;
+  }
+}
+
+/* === DESKTOP === */
+@media (min-width: 1184px) {
+  /* City prensentation */
+  .city-presentation {
+    display: flex;
+    margin-bottom: 80px;
+  }
+  .intro {
+    width: 50%;
+  }
+  .map {
+    width: calc(50% - 120px);
+    margin-left: 120px;
+    flex-direction: column;
+  }
+  .map .card-header {
+    flex: auto;
+    border-radius: 16px 16px 0 0;
+  }
+  .map .card-image {
+    flex: auto;
+    height: 190px;
+  }
+  .map .card-image img {
+    border-radius: 0 0 16px 16px;
+  }
+}

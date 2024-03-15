@@ -1,0 +1,26 @@
+/* === VARIABLES === */
+
+:root {
+  /* Colors */
+  --black: #000000;
+  --white: #ffffff;
+  --red: #ff5d5d;
+  --light-red: #faf1ed;
+  --gray: #909090;
+  --light-gray: #f2f2f2;
+  --green: #35e1a1;
+  --dark-green: #04aa6c;
+  --black-medium: rgb(0, 0, 0, 0.7);
+
+  /* Fonts */
+  --regular: "TS-Reg", "Arial", sans-serif;
+  --medium: "TS-Med", "Arial", sans-serif;
+
+  /* Screen sizes */
+  --screen-small: 768px;
+  --screen-medium: 1024px;
+  --screen-large: 1184px;
+
+  /* Components sizes */
+  --header-height: 60px;
+}

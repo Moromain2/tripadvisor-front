@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "TS-Reg"; /* <== On donne un nom unique */
+  src: url("../fonts/TripSans-Regular.woff2") format("woff2");
+  font-weight: normal; /* <== On définit le poids de la police */
+  font-style: normal; /* <== On définit le style de la police */
+  font-display: swap; /* <== On spécifie le comportement d'affichage de la police. Ca indique que le navigateur doit afficher une police de secours immédiatement, puis charger la police personnalisée en arrière-plan. */
+}
+
+@font-face {
+  font-family: "TS-Med";
+  src: url("../fonts/TripSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

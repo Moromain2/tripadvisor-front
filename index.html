@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Import des feuilles de style -->
+        <link rel="stylesheet" href="./assets/css/main.css">
+
+        <!-- Import FA -->
+        <script src="https://kit.fontawesome.com/b5fb368371.js" crossorigin="anonymous"></script>
+
+        <!-- Import JS-->
+        <script src="./assets/javascript/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <title>Trip Advisor 🌈</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="./assets/img/favicon-tripadvisor.svg">
+    </head>
+    <body>
+        <header>
+            <nav class="container">
+                <div class="mobile-header">
+                    <i class="fa-solid fa-bars mobile-menu"></i>
+                    <a href="#">
+                        <img src="./assets/img/Tripadvisor_logo.svg" alt="logo Trip Advisor">
+                    </a>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    </ul>
+                </div>
+                <menu class="desktop-header">
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-pencil"></i><span>Avis</span></a></li>
+                        <li><a href="#"><i class="fa-regular fa-heart"></i><span>Voyages</span></a></li>
+                        <li><a href="#"><i class="fa-regular fa-bell"></i><span>Alertes</span></a></li>
+                        <li><a class="cta-btn" id="contact-btn" href="#">Contactez nous</a></li>
+                        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i><span>Panier</span></a></li>
+                    </ul>
+                </menu>
+            </nav>
+        </header>
+        <main>
+            <section id="contact-modal" class="">
+                <div class="container">
+                    <div class="form-container">
+                        <div id="form-close-icon" class="close-icon"><i class="fa-solid fa-xmark"></i></div>
+                        <h4>Formulaire de contact</h4>
+                        <form id="contact-form">
+                            <div class="input-group">
+                                <label for="firstname">Prénom</label>
+                                <input type="text" name="firstname" id="firstname" placeholder="Prénom">
+                            </div>
+                            <div class="input-group">
+                                <label for="lastname">Nom</label>
+                                <input type="text" name="lastname" id="lastname" placeholder="Nom">
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="Email">
+                            </div>
+                            <div class="input-group">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" placeholder="Écrivez votre message ici..." cols="30" rows="10"></textarea>
+                            </div>
+                            <button id="contact-form-submit">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section id="hero">
+                <div class="container page-title-container">
+                    <h1><span>Explorez</span> Paris</h1>
+                    <p>Les revenus influencent le choix des expériences présentées sur cette page : <a href="#">en savoir plus.</a></p>
+                </div>
+                <div class="tags-list container">
+                    <ul>
+                        <li>
+                            <button class="tag">
+                                <span>
+                                    Hotels
+                                </span>
+                                <i class="fa-solid fa-bed"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="tag">
+                                <span>
+                                    Locations de vacances
+                                </span>
+                                <i class="fa-solid fa-home"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="tag">
+                                <span>
+                                    Activités
+                                </span>
+                                <i class="fa-solid fa-ticket"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="tag">
+                                <span>
+                                    Restaurants
+                                </span>
+                                <i class="fa-solid fa-cutlery"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="tag">
+                                <span>
+                                    Forums de voyage
+                                </span>
+                                <i class="fa-solid fa-comment"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="tag">
+                                <span>
+                                    Vols
+                                </span>
+                                <i class="fa-solid fa-plane"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="tag">
+                                <span>
+                                    Croisières
+                                </span>
+                                <i class="fa-solid fa-sailboat"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="tag">
+                                <span>
+                                    Plus
+                                </span>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="images-container container">
+                    <div class="cover-image">
+                        <img src="./assets/img/view.jpg" alt="les quais de seine à Paris">
+                        <button class="image-button">
+                            <i class="fa-regular fa-image"></i>
+                            <span>Toutes les photos</span>
+                        </button>
+                    </div>
+                    <div class="side-images">
+                        <img src="./assets/img/caption-8.jpg" alt="un couple en train de monter sur une moto devant le jardin du luxembourg">
+                        <img src="./assets/img/caption-9.jpg" alt="vue de la tour Eiffel depuis le Trocadéro">
+                    </div>
+                </div>
+            </section>
+            <section id="intro">
+                <div class="bread-crumbs container">
+                    <ul>
+                        <li><a href="#">Europe</a><i class="fa-solid fa-chevron-right"></i></li>
+                        <li><a href="#">France</a><i class="fa-solid fa-chevron-right"></i></li>
+                        <li><a href="#">Île-de-France</a><i class="fa-solid fa-chevron-right"></i></li>
+                        <li><a href="#">Paris</a><i class="fa-solid fa-caret-down"></i></li>
+                    </ul>
+                    <span>Visiter : Paris</span>
+                </div>
+                <div class="city-presentation container">
+                    <div class="intro">
+                        <h2>La Ville Lumière éblouit en tous points</h2>
+                        <p>Aucun autre endroit au monde ne fait autant rêver que Paris. La ville séduit par son art, son architecture, sa culture et sa cuisine, mais il y a aussi des merveilles plus discrètes qui n’attendent qu’à être explorées : les ruelles pavées pittoresques, les pâtisseries au coin de la rue et les petits bistrots douillets qui vous invitent à boire un verre de beaujolais. Préparez-vous à vous approprier Paris.</p>
+                    </div>
+                    <div class="map">
+                        <div class="card-header">
+                            <h3>Paris : commencez à organiser !</h3>
+                            <p>Créez un voyage pour enregistrer et organiser toutes vos idées et les visualiser sur une carte.</p>
+                            <a class="cta-btn" href="#">Créez un voyage</a>
+                        </div>
+                        <div class="card-image">
+                            <img src="./assets/img/map.png" alt="carte de Paris avec indication de lieux d'interêts">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="must-see">
+                <div class="container">
+                    <h2>Paris : les immanquables</h2>
+                    <div class="attractions-list">
+                        <div class="intro">
+                            <h4>Se divertir</h4>
+                            <p>Des lieux à voir, des rues à explorer et des expériences emblématiques à Paris.</p>
+                            <a href="#">Tout afficher</a>
+                        </div>
+                        <div class="attractions-grid">
+                            <div class="attraction-card">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="./assets/img/eiffel-tower.jpeg" alt="vue de la tour Eiffel">
+                                        <div class="travelers-badge">
+                                            <i class="fa-solid fa-award"></i>
+                                            <span>2024</span>
+                                        </div>
+                                        <button class="like-button">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <h5>Tour Eiffel</h5>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle-half-stroke"></i>
+                                        <span>139 901</span>
+                                    </div>
+                                    <p>Tours et plateformes d'observation, Monuments & Points d'intérêt</p>
+                                </a>
+                            </div>
+                            <div class="attraction-card">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="./assets/img/arc-de-triomphe.jpeg" alt="L'arc de Triomphe de nuit">
+                                        <div class="travelers-badge">
+                                            <i class="fa-solid fa-award"></i>
+                                            <span>2024</span>
+                                        </div>
+                                        <button class="like-button">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <h5>Arc de Triomphe</h5>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle-half-stroke"></i>
+                                        <span>56 987</span>
+                                    </div>
+                                    <p>Bâtiments architecturaux, Sites historiques</p>
+                                </a>
+                            </div>
+                            <div class="attraction-card">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="./assets/img/louvre.jpg" alt="La pyramide du louvre de nuit">
+                                        <div class="travelers-badge">
+                                            <i class="fa-solid fa-award"></i>
+                                            <span>2024</span>
+                                        </div>
+                                        <button class="like-button">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <h5>Musée du Louvre</h5>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle-half-stroke"></i>
+                                        <span>100 845</span>
+                                    </div>
+                                    <p>Bâtiments architecturaux, Musées d'art</p>
+                                </a>
+                            </div>
+                            <div class="attraction-card">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="./assets/img/puces-st-ouen.jpeg" alt="Le marché aux puces de Saint Ouen">
+                                        <div class="travelers-badge">
+                                            <i class="fa-solid fa-award"></i>
+                                            <span>2024</span>
+                                        </div>
+                                        <button class="like-button">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <h5>Marché aux Puces de Saint-Ouen</h5>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle-half-stroke"></i>
+                                        <span>103 495</span>
+                                    </div>
+                                    <p>Antiquaires, Marchés aux puces & Marchés de rue Saint-Ouen, France À 5,4 kilomètres de Paris</p>
+                                </a>
+                            </div>
+                            <div class="attraction-card">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="./assets/img/notre-dame.jpeg" alt="La Cathédrale de Notre-Dame">
+                                        <div class="travelers-badge">
+                                            <i class="fa-solid fa-award"></i>
+                                            <span>2024</span>
+                                        </div>
+                                        <button class="like-button">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <h5>Cathédrale Notre-Dame de Paris</h5>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle-half-stroke"></i>
+                                        <span>139 901</span>
+                                    </div>
+                                    <p>Bâtiments architecturaux, Musées d'art</p>
+                                </a>
+                            </div>
+                            <div class="attraction-card">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="./assets/img/rodin.jpeg" alt="Le musée Rodin">
+                                        <div class="travelers-badge">
+                                            <i class="fa-solid fa-award"></i>
+                                            <span>2024</span>
+                                        </div>
+                                        <button class="like-button">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <h5>Musée Rodin</h5>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle-half-stroke"></i>
+                                        <span>187 981</span>
+                                    </div>
+                                    <p>Musées spécialisés</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="attractions-list">
+                        <div class="intro">
+                            <h4>Se restaurer</h4>
+                            <p>Bistrots et bars typiques, et plus encore à Paris.</p>
+                            <a href="#">Tout afficher</a>
+                        </div>
+                        <div class="attractions-grid">
+                            <div class="attraction-card">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="./assets/img/frenchie.jpeg" alt="assiette contenant un plat cuisiné avec un carré de veau et des légumes">
+                                        <div class="travelers-badge">
+                                            <i class="fa-solid fa-award"></i>
+                                            <span>2024</span>
+                                        </div>
+                                        <button class="like-button">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <h5>Frenchie</h5>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle-half-stroke"></i>
+                                        <span>1 297</span>
+                                    </div>
+                                    <p>€€€€ · Française, Végétariens bienvenus, Plats sans gluten</p>
+                                </a>
+                            </div>
+                            <div class="attraction-card">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="./assets/img/114-feaubourg.jpeg" alt="Cassolette de légumes">
+                                        <div class="travelers-badge">
+                                            <i class="fa-solid fa-award"></i>
+                                            <span>2024</span>
+                                        </div>
+                                        <button class="like-button">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <h5>114 Feaubourg</h5>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle-half-stroke"></i>
+                                        <span>1 754</span>
+                                    </div>
+                                    <p>€€ · Française, Européenne, Végétariens bienvenus</p>
+                                </a>
+                            </div>
+                            <div class="attraction-card">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="./assets/img/verjus.jpeg" alt="Assiette creuse contenant une émulsion et de la saint jacques">
+                                        <div class="travelers-badge">
+                                            <i class="fa-solid fa-award"></i>
+                                            <span>2024</span>
+                                        </div>
+                                        <button class="like-button">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <h5>Verjus</h5>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle-half-stroke"></i>
+                                        <span>545</span>
+                                    </div>
+                                    <p>€€€ · Française, Européenne, Moderne</p>
+                                </a>
+                            </div>
+                            <div class="attraction-card">
+                                <a href="#">
+                                    <div class="image-container">
+                                        <img src="./assets/img/aspic.jpeg" alt="Assiette gastronomique">
+                                        <div class="travelers-badge">
+                                            <i class="fa-solid fa-award"></i>
+                                            <span>2024</span>
+                                        </div>
+                                        <button class="like-button">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </div>
+                                    <h5>ASPIC</h5>
+                                    <div class="rating">
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle"></i>
+                                        <i class="fa-solid fa-circle-half-stroke"></i>
+                                        <span>103 495</span>
+                                    </div>
+                                    <p>€€€€ · Française, Européenne, Saine</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="travelers-guide">
+                <div class="container">
+                    <h2>Guide de voyageurs</h2>
+                    <div class="guides-list">
+                        <div class="guide-card">
+                            <img src="./assets/img/visit1.jpg" alt="Vue intérieure d'un atelier d'artiste">
+                            <h5>Best things to do in Paris | Eatwith</h5>
+                            <span>36 articles</span>
+                            <div class="sponsor">
+                                <img src="./assets/img/eatwith-logo.jpeg" alt="logo Eatwith">
+                                <span>Par <strong>Eatwith</strong></span>
+                            </div>
+                        </div>
+                        <div class="guide-card">
+                            <img src="./assets/img/visit2.jpg" alt="Hall d'entrée d'une salle de théâtre">
+                            <h5>Les 10 monuments et musées de Paris à faire</h5>
+                            <span>10 articles</span>
+                            <div class="sponsor">
+                                <img src="./assets/img/topito-logo.jpeg" alt="logo Topito">
+                                <span>Par <strong>Topito</strong></span>
+                            </div>
+                        </div>
+                        <div class="guide-card">
+                            <img src="./assets/img/visit3.jpg" alt="Gros plans sur des têtes de mort dans les catacombes de Paris">
+                            <h5>Top 10 des choses à faire ou à voir dans le 14ème</h5>
+                            <span>10 articles</span>
+                            <div class="sponsor">
+                                <img src="./assets/img/topito-logo.jpeg" alt="logo Topito">
+                                <span>Par <strong>Topito</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <img src="./assets/img/favicon-tripadvisor.svg" alt="Icon Tripadvisor" id="footer-image">
+            <p>Made at <a href="https://lereacteur.io" target="_blank">Le Reacteur</a> by <a href="https://github.com/Moromain2" target="_blank">Romain M.</a></p>
+        </footer>
+    </body>
+</html>

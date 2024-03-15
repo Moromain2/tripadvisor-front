@@ -1,0 +1,60 @@
+/* === FORMS === */
+#contact-modal.hidden {
+  display: none;
+}
+#contact-modal {
+  background-color: var(--black-medium);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-container {
+  background-color: var(--white);
+  padding: 60px;
+  position: relative;
+  border-radius: 20px;
+}
+.form-container h4 {
+  text-align: center;
+}
+.close-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 24px;
+  color: var(--gray);
+  cursor: pointer;
+}
+.close-icon:hover {
+  color: var(--black);
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 20vw;
+  margin-bottom: 20px;
+}
+.input-group input,
+.input-group textarea {
+  padding: 10px;
+  font-size: 16px;
+  font-family: var(--regular);
+  border: 2px solid var(--black);
+}
+#contact-form-submit {
+  font-family: var(--regular);
+  background-color: var(--dark-green);
+  color: var(--white);
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+}

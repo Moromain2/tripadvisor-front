@@ -1,0 +1,86 @@
+/* ===== HEADER ===== */
+header {
+  border-bottom: 1px solid var(--light-gray);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white);
+  z-index: 2;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  height: var(--header-height);
+  align-items: center;
+}
+header nav .mobile-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .mobile-header i {
+  font-size: 22px;
+  color: var(--black);
+}
+header nav .mobile-header a img {
+  width: 132px;
+}
+header nav .mobile-header ul {
+  display: flex;
+  gap: 12px;
+}
+
+header nav .desktop-header {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  header nav .mobile-header .mobile-menu {
+    display: none;
+  }
+  header nav .mobile-header a img {
+    width: 190px;
+  }
+  header nav .mobile-header ul {
+    display: none;
+  }
+  header nav .desktop-header {
+    display: block;
+  }
+  header nav .desktop-header ul {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  header nav .desktop-header ul li a span {
+    display: none;
+  }
+  header nav .desktop-header ul li a:not(.cta-btn) {
+    padding: 8px 10px;
+    color: var(--black);
+  }
+  header nav .desktop-header ul li a i {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1020px) {
+  header nav .desktop-header ul li a:not(.cta-btn) {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 30px;
+  }
+  header nav .desktop-header ul li a:not(.cta-btn):hover {
+    background-color: var(--light-red);
+  }
+  header nav .desktop-header ul li a span {
+    display: block;
+    font-size: 16px;
+  }
+  header nav .desktop-header ul li a i {
+    margin-right: 4px;
+  }
+}
