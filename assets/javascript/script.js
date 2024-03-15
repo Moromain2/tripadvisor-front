@@ -20,7 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
       "https://site--tripadvisor-back--hcj2xjlwfzkm.code.run/form",
       data
     );
-    console.log(response.config.data);
+
+    // Confirme à l'utilisateur que le message a bien été envoyé
+    document.getElementById("success").classList.remove("hidden");
+    setTimeout(() => {
+      // Réinitialise la modale de contact 1 seconde après envoi
+      messageModal.classList.add("hidden");
+      document.querySelector("body").classList.remove("no-scroll");
+      document.getElementById("success").classList.add("hidden");
+    }, 1000);
   });
 
   // Afficher le formulaire de contact
